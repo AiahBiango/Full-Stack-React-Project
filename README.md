@@ -21,6 +21,7 @@ Node.js v24.13.0
 Git v2.52.0
 Visual Studio Code v1.108.2
 Docker v4.57.0.0
+Mongodb and mongosh (mongodb shell)
 
 ## We created React project with
 
@@ -33,3 +34,7 @@ npx allows us to execute commands provided by npm
 "Prettier" for code formating
 "ESLint" to enforce Js and React best practices
 "Husky" and "lint-staged" to make sure we commit proper code
+"Mongoose" for working with Mongodb
+"Express" for working http api
+"Jest" to write and run unit test for services functions
+"mongodb-memory-server" to spin up a fresh instance of MongoDB database, storing data only in memory
