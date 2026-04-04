@@ -8,8 +8,7 @@ import globals from 'globals'
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.js', '**/*.jsx'],
-    ignores: ['node_modules', 'dist', 'vite.config.js', 'coverage'],
+    ignores: ['node_modules', 'dist', 'coverage'],
     languageOptions: {
       parser: babelParser,
       parserOptions: {
@@ -19,16 +18,14 @@ export default [
         ecmaFeatures: { jsx: true },
         babelOptions: { presets: ['@babel/preset-react'] },
       },
-      globals: {
-        ...globals.browser,   
+      env: {
+        node: true, 
+        es6: true   
       },
     },
     plugins: {
-      react: reactPlugin,
-      'jsx-a11y': jsxA11yPlugin,
-    },
-    settings: {
-      react: { version: 'detect' },
+      eslint: recommended,
+      prettier
     },
     rules: {
       'react/jsx-uses-react': 'error',
