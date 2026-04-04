@@ -33,3 +33,10 @@ npx allows us to execute commands provided by npm
 "Prettier" for code formating
 "ESLint" to enforce Js and React best practices
 "Husky" and "lint-staged" to make sure we commit proper code
+
+## Integrating the backend 
+"TanStack Query (preveiouly called React Query) for data fetching that helps us with caching, synchronizing, ad updating data from the backend. TanStack Query focuses on managing the state of fetched data, ie, server state.
+
+## Deployment Db Connection String: mongodb+srv://lineoftech71_db_user:u6OXYis1KNfthR3L@mongodb.let0itq.mongodb.net/?appName=mongodb
+
+
