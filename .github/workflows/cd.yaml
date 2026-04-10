@@ -21,6 +21,7 @@ jobs:
         with:
           service_account: ${{ secrets.GOOGLECLOUD_SERVICE_ACCOUNT  }}
           credentials_json: ${{ secrets.GOOGLECLOUD_CREDENTIALS }}
+
       - name: Build and push backend Docker image
         uses: docker/build-push-action@v4
         with:
@@ -35,13 +36,7 @@ jobs:
           service: blog-backend
           image: ${{ secrets.DOCKERHUB_LINEOFTECH }}/blog-backend:latest
           region: ${{ secrets.GOOGLECLOUD_REGION }}
-      - id: deploy-frontend
-        name: Deploy frontend
-        uses: google-github-actions/deploy-cloudrun@v1
-        with:
-          service: blog-frontend
-          image: ${{ secrets.DOCKERHUB_LINEOFTECH }}/blog-frontend:latest
-          region: ${{ secrets.GOOGLECLOUD_REGION }}
+
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v4
         with:
