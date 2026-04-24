@@ -40,8 +40,8 @@ jobs:
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./ch5
+          file: ./ch5/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/blog-frontend:latest
           build-args: VITE_BACKEND_URL=${{ steps.deploy-backend.outputs.url }}/api/v1
